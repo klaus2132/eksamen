@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Linker til stilark-->
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://kit.fontawesome.com/94523dfeef.js" crossorigin="anonymous"></script>
 
         <title>Eksamen</title>
     </head>
@@ -10,28 +13,31 @@
 
         <div id="grid_container">
             <header>
-                <nav>
+                <nav id="navbar">
                     <a href="index.html">
                         <img src="ressurser/ressurser/logo1.png" alt="Logo">
                     </a>
-                    <ul>
+                    <ul id="nav-knapper">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Portfolio</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" class="knapp">Contact</a></li>
                     </ul>
                 </nav>
             </header>
 
             <main>
-                <section>
-                    <h1>Compeling headline</h1>
+                <section id="video-section">
 
-                    <p>Lorem ipsum Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ultrices semper nisl eu aliquet. Nulla tempor et dolor id sodales, morbi fringilla orci dolor.</p>
-
-                    <a href="#">
-                        <h4>Read more about our services</h4>
-                    </a>
+                    <video autoplay muted loop id="video">
+                        <source src="ressurser/ressurser/mountains.mp4">
+                    </video>
+                    
+                    <article id="innhold">
+                        <h1>Compeling headline</h1>
+                        <p>Lorem ipsum Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ultrices semper nisl eu aliquet. Nulla tempor et dolor id sodales, morbi fringilla orci dolor.</p>
+                        <h4><a href="#" class="knapp">Read more about our services</a></h4>
+                    </article>
                 </section>
 
                 <section>
@@ -46,37 +52,37 @@
 
                     <p>Lorem ipsum Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ultrices semper nisl eu aliquet. Nulla tempor et dolor id sodales, morbi fringilla orci dolor.</p>
 
-                    <a href="#">
-                        <h4>Read more about us</h4>
-                    </a>
+                    <h4><a href="#" class="knapp">Read more about us</a></h4>
+                    
                 </section>
 
-                <section>
+                <section id="services">
                     <h2>Our services</h2>
+                    <div>
+                        <article>
+                            <i class="fa-solid fa-users fa-2xl" style="color: #000000;"></i>
+                            <h3>Branding</h3>
+                            <p>Lorem ipsum Orci varius natoque penatibus et magnis</p>
+                        </article>
 
-                    <article>
-                        <h3>Branding</h3>
+                        <article>
+                            <i class="fa-solid fa-cloud-arrow-up fa-2xl" style="color: #000000;"></i>
+                            <h3>Design</h3>
+                            <p>Lorem ipsum Orci varius natoque penatibus et magnis</p>
+                        </article>
 
-                        <p>Lorem ipsum Orci varius natoque penatibus et magnis</p>
-                    </article>
+                        <article>
+                            <i class="fa-solid fa-code fa-2xl" style="color: #000000;"></i>
+                            <h3>Development</h3>
+                            <p>Lorem ipsum Orci varius natoque penatibus et magnis</p>
+                        </article>
 
-                    <article>
-                        <h3>Design</h3>
-
-                        <p>Lorem ipsum Orci varius natoque penatibus et magnis</p>
-                    </article>
-
-                    <article>
-                        <h3>Development</h3>
-
-                        <p>Lorem ipsum Orci varius natoque penatibus et magnis</p>
-                    </article>
-
-                    <article>
-                        <h3>Support</h3>
-
-                        <p>Lorem ipsum Orci varius natoque penatibus et magnis</p>
-                    </article>
+                        <article>
+                            <i class="fa-solid fa-wifi fa-2xl" style="color: #000000;"></i>
+                            <h3>Support</h3>
+                            <p>Lorem ipsum Orci varius natoque penatibus et magnis</p>
+                        </article>
+                    </div>
                 </section>
 
                 <section>
@@ -93,10 +99,11 @@
                 </a>
 
                 <h6>Companyrights Companyname 2023</h6>
-
-                <h6>facebook</h6>
-                <h6>instagram</h6>
-                <h6>linkedin</h6>
+                <section>
+                    <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+                </section>
             </footer>
 
         </div>

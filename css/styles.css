@@ -1,0 +1,104 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+/*Knapp som går igjen på siden*/
+.knapp{
+    background-color: #e6bd43;
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.knapp:hover{
+    background-color: black;
+    color: #e6bd43;
+}
+
+
+/*Navbar design*/
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-knapper{
+    display: flex;
+    list-style: none;
+}
+
+#nav-knapper li a{
+    text-decoration: none;
+    padding: 1rem;
+}
+
+#nav-knapper li a:hover{
+    text-decoration: underline;  
+}
+
+
+/*Footer design*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #252525;
+    color: white;
+}
+
+footer section a{
+    margin: 1rem;
+}
+
+
+/*Forside design*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Video section*/
+#video-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#video{
+    object-fit: cover;
+}
+
+#innhold{
+    position: absolute;
+    text-align: center;
+    margin: 2rem;
+}
+
+#innhold h1{
+    font-size: xx-large;
+}
+
+
+/*service section*/
+#services{
+    display: flex;
+    flex-direction: column;
+}
+
+#services div{
+    display: flex;
+}
+
+#services div article{
+    padding: 1rem;
+    margin: 1.5rem;
+}
