@@ -3,6 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Linker til stilark-->
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://kit.fontawesome.com/94523dfeef.js" crossorigin="anonymous"></script>
 
         <title>Eksamen</title>
     </head>
@@ -10,20 +13,24 @@
 
         <div id="grid_container">
             <header>
-                <nav>
+                <nav id="navbar">
                     <a href="index.html">
-                        <img src="ressurser/ressurser/logo1.png" alt="Logo">
+                        <img src="ressurser/ressurser/logo1.png" alt="Logo" class="logo">
                     </a>
-                    <ul>
+                    <ul id="nav-knapper">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Portfolio</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" class="knapp">Contact</a></li>
                     </ul>
                 </nav>
             </header>
 
             <main>
+                <section id="heading">
+                    <h1>Portfolio</h1>
+                    <!--Bilde som bakgrunn-->
+                </section>
 
             </main>
 
@@ -33,10 +40,11 @@
                 </a>
 
                 <h6>Companyrights Companyname 2023</h6>
-
-                <h6>facebook</h6>
-                <h6>instagram</h6>
-                <h6>linkedin</h6>
+                <section>
+                    <a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+                </section>
             </footer>
 
         </div>

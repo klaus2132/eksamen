@@ -3,6 +3,28 @@ body{
     text-align: center;
 }
 
+#grid_container{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+#grid_container {
+    display: grid;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    /*grid-template-columns: auto auto auto;*/
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+}
 
 /*Knapp som går igjen på siden*/
 .knapp{
@@ -23,20 +45,33 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 125px;
 }
 
 #nav-knapper{
     display: flex;
     list-style: none;
+    font-weight: bolder;
 }
 
 #nav-knapper li a{
     text-decoration: none;
     padding: 1rem;
+    color: black;
 }
 
 #nav-knapper li a:hover{
-    text-decoration: underline;  
+    text-decoration: underline; 
+    color: #e6bd43; 
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    padding-left: 1rem;
+    margin-bottom: auto;
+    margin-top: auto;
+    
 }
 
 
@@ -47,6 +82,7 @@ footer{
     align-items: center;
     background-color: #252525;
     color: white;
+    height: 150px;
 }
 
 footer section a{
@@ -61,30 +97,64 @@ main{
     align-items: center;
 }
 
+main section{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
 /*Video section*/
 #video-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-#video{
-    object-fit: cover;
+    min-height: 40vh;
+    min-width: 100%;
+    background-color: lightgray;
 }
 
 #innhold{
-    position: absolute;
-    text-align: center;
-    margin: 2rem;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 #innhold h1{
-    font-size: xx-large;
+    font-size: 2.5rem;
+}
+
+#innhold p{
+    padding: 5%;
+}
+
+/*andre section på forsiden*/
+#subheading{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#subheading h2{
+    font-size: 2rem;
+}
+
+
+/*about-our-company*/
+#about-our-company{
+    background-color: #e6bd43;
+    width: 100%;
+}
+
+#about-our-company h4 a{
+    background-color: #e6bd43;
+    color: black;
+    border-style: solid;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+#about-our-company h4 a:hover{
+    background-color: #252525;
+    color: #e6bd43;
 }
 
 
@@ -92,6 +162,8 @@ main{
 #services{
     display: flex;
     flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #services div{
@@ -100,5 +172,71 @@ main{
 
 #services div article{
     padding: 1rem;
-    margin: 1.5rem;
+    margin: 1rem;
+}
+
+
+/*newsletter*/
+#newsletter{
+    margin-top: 0;
+    padding-top: 1rem;
+}
+#newsletter h2{
+    margin-bottom: 2rem;
+}
+
+#newsletter form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newsletter form input{
+    padding: 1rem;
+    border-style: none;
+}
+
+#newsletter form button{
+    padding: 1rem;
+    background-color: #e6bd43;
+    color: black;
+    border-style: none;
+    font-weight: bolder;
+}
+
+
+#newsletter form button:hover{
+    padding: 1rem;
+    background-color: black;
+    color: #e6bd43;
+}
+
+
+
+
+
+/*about siden*/
+#companyname{
+    background-color:#252525;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+#companyname article{
+    width: 40%;
+    text-align: left;
+    background-color: white;
+    opacity: 0.7;
+    padding: 2rem;
+    margin-right: 1rem;
+}
+
+#clients{
+    width: 100%;
+    background-color: #e6bd43;
+}
+
+#clients img{
+    padding: 2rem;
 }
