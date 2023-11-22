@@ -39,6 +39,15 @@ footer{
     color: #e6bd43;
 }
 
+/*tilbake til toppen knapp*/
+#til-toppen{
+    background-color: #252525;
+    padding: 1rem;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+}
 
 /*Navbar design*/
 #navbar{
@@ -52,6 +61,7 @@ footer{
     display: flex;
     list-style: none;
     font-weight: bolder;
+    font-size: 1.1rem;
 }
 
 #nav-knapper li a{
@@ -98,8 +108,8 @@ main{
 }
 
 main section{
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
 }
 
 
@@ -142,8 +152,20 @@ main section{
 #about-our-company{
     background-color: #e6bd43;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
+#about-our-company article{
+    width: 40%;
+    text-align: left;
+    padding: 2rem;
+    margin-right: 1rem;
+}
+
+#about-our-company h4{
+    margin-top: 5rem;
+}
 #about-our-company h4 a{
     background-color: #e6bd43;
     color: black;
@@ -175,14 +197,19 @@ main section{
     margin: 1rem;
 }
 
+#services h2{
+    font-size: 2.5rem;
+}
+
 
 /*newsletter*/
 #newsletter{
-    margin-top: 0;
-    padding-top: 1rem;
+    background-color: lightgray;
+    width: 100%;
 }
 #newsletter h2{
     margin-bottom: 2rem;
+    font-size: 2.5rem;
 }
 
 #newsletter form{
@@ -194,6 +221,7 @@ main section{
 #newsletter form input{
     padding: 1rem;
     border-style: none;
+    font-size: 0.9rem;
 }
 
 #newsletter form button{
@@ -202,6 +230,7 @@ main section{
     color: black;
     border-style: none;
     font-weight: bolder;
+    font-size: 0.9rem;
 }
 
 
@@ -215,7 +244,7 @@ main section{
 
 
 
-/*about siden*/
+/*about siden design*/
 #companyname{
     background-color:#252525;
     display: flex;
@@ -232,6 +261,30 @@ main section{
     margin-right: 1rem;
 }
 
+
+/*service section*/
+#about-services{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#about-services div{
+    display: flex;
+}
+
+#about-services div article{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#about-services h2{
+    font-size: 2.5rem;
+}
+
+
+/*clients section*/
 #clients{
     width: 100%;
     background-color: #e6bd43;
@@ -239,4 +292,75 @@ main section{
 
 #clients img{
     padding: 2rem;
+}
+
+/*Kontak oss section*/
+#contact-us{
+    background-color: rgb(240, 240, 240);
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#contact-us h2{
+    font-size: 2.5rem;
+}
+
+#contact-us div{
+    display: flex;
+    justify-content: space-around;
+}
+
+#contact-us div article{
+    width: 40%;
+    text-align: left;
+}
+
+#contact-us div article span{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+#contact-us div article span i{
+    padding-right: 1rem;
+}
+
+#contact-us div form{
+    width: 40%;
+    text-align: left;
+}
+
+.contact-label{
+    margin-bottom: 5rem;
+}
+
+.contact-input{
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-style: none;
+    width: 100%;
+}
+
+.contact-message{
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-style: none;
+    width: 100%;
+    height: 8rem;
+}
+
+.submit{
+    background-color: #e6bd43;
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+    border-style: none;
+    font-weight: bold;
+}
+
+.submit:hover{
+    background-color: black;
+    color: #e6bd43;
 }
