@@ -8,12 +8,6 @@ body{
     grid-template-areas: "header" "main" "footer";
 }
 
-#grid_container {
-    display: grid;
-    grid-template-areas: "header header header" "main main main" "footer footer footer";
-    /*grid-template-columns: auto auto auto;*/
-}
-
 header{
     grid-area: header;
 }
@@ -34,10 +28,6 @@ footer{
     text-decoration: none;
 }
 
-.knapp:hover{
-    background-color: black;
-    color: #e6bd43;
-}
 
 /*tilbake til toppen knapp*/
 #til-toppen{
@@ -45,40 +35,56 @@ footer{
     padding: 1rem;
     border-radius: 5px;
     position: fixed;
-    bottom: 5rem;
-    right: 5rem;
+    bottom: 3rem;
+    right: 3rem;
 }
 
 /*Navbar design*/
 #navbar{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 125px;
+    flex-direction: column;
+    padding-bottom: 1rem;
 }
 
 #nav-knapper{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style: none;
-    font-weight: bolder;
-    font-size: 1.1rem;
+    padding-left: 0;
 }
 
-#nav-knapper li a{
-    text-decoration: none;
-    padding: 1rem;
+#nav-knapper li{
+    padding: 0.7rem;
+}
+
+.aktiv-side{
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color: #e6bd43;
+    text-decoration-thickness: 20%;
     color: black;
 }
 
-#nav-knapper li a:hover{
-    text-decoration: underline; 
-    color: #e6bd43; 
+.ikke-aktiv{
+    text-decoration: none;
+    color: black;
 }
 
+.contact-knapp{
+    background-color: #e6bd43;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #252525;
+}
+
+
+
+
 .logo{
-    height: 100px;
+    height: 6rem;
     width: auto;
-    padding-left: 1rem;
     margin-bottom: auto;
     margin-top: auto;
     
@@ -88,64 +94,77 @@ footer{
 /*Footer design*/
 footer{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: #252525;
     color: white;
-    height: 150px;
+    height: 25vh;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 footer section a{
-    margin: 1rem;
+    padding: 1rem;
 }
 
 
+
 /*Forside design*/
-main{
+#forside{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main section{
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-}
 
 
-/*Video section*/
+/*Video section
 #video-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 40vh;
-    min-width: 100%;
     background-color: lightgray;
 }
+*/
 
 #innhold{
-    padding-left: 15%;
-    padding-right: 15%;
+    width: 100%;
+    height: 50vh;
+    background-color: lightgray;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #innhold h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #innhold p{
-    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
+
+
+
 
 /*andre section på forsiden*/
 #subheading{
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-#subheading h2{
-    font-size: 2rem;
-}
+
+
 
 
 /*about-our-company*/
@@ -153,18 +172,31 @@ main section{
     background-color: #e6bd43;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#about-our-company img{
+    max-width: 80%;
+    height: auto;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 #about-our-company article{
-    width: 40%;
+    width: 70%;
     text-align: left;
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
     margin-right: 1rem;
 }
 
 #about-our-company h4{
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 #about-our-company h4 a{
     background-color: #e6bd43;
@@ -174,42 +206,42 @@ main section{
     text-decoration: none;
 }
 
-#about-our-company h4 a:hover{
-    background-color: #252525;
-    color: #e6bd43;
-}
 
 
 /*service section*/
 #services{
     display: flex;
     flex-direction: column;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 #services div{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 #services div article{
     padding: 1rem;
     margin: 1rem;
+    max-width: 200px;
 }
 
-#services h2{
-    font-size: 2.5rem;
-}
 
 
 /*newsletter*/
 #newsletter{
     background-color: lightgray;
     width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 #newsletter h2{
     margin-bottom: 2rem;
-    font-size: 2.5rem;
 }
 
 #newsletter form{
@@ -221,7 +253,7 @@ main section{
 #newsletter form input{
     padding: 1rem;
     border-style: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 #newsletter form button{
@@ -229,15 +261,8 @@ main section{
     background-color: #e6bd43;
     color: black;
     border-style: none;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 0.9rem;
-}
-
-
-#newsletter form button:hover{
-    padding: 1rem;
-    background-color: black;
-    color: #e6bd43;
 }
 
 
@@ -246,19 +271,22 @@ main section{
 
 /*about siden design*/
 #companyname{
+    height: 80vh;
     background-color:#252525;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     width: 100%;
 }
 
 #companyname article{
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;
     text-align: left;
     background-color: white;
-    opacity: 0.7;
     padding: 2rem;
-    margin-right: 1rem;
+    margin: 2rem;
 }
 
 
@@ -266,59 +294,62 @@ main section{
 #about-services{
     display: flex;
     flex-direction: column;
-    padding-left: 10%;
-    padding-right: 10%;
+    align-items: center;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 #about-services div{
     display: flex;
+    flex-direction: column;
 }
 
 #about-services div article{
     padding: 1rem;
     margin: 1rem;
+    max-width: 200px;
 }
 
-#about-services h2{
-    font-size: 2.5rem;
-}
 
 
 /*clients section*/
 #clients{
     width: 100%;
     background-color: #e6bd43;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 #clients img{
-    padding: 2rem;
+    height: 8rem;
+    width: auto;
+    padding: 1rem;
 }
+
 
 /*Kontak oss section*/
 #contact-us{
-    background-color: rgb(240, 240, 240);
+    background-color: lightgray;
     padding-left: 10%;
     padding-right: 10%;
-}
-
-#contact-us h2{
-    font-size: 2.5rem;
+    padding-top: 2rem;
 }
 
 #contact-us div{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
 #contact-us div article{
-    width: 40%;
+    width: 90%;
     text-align: left;
 }
 
 #contact-us div article span{
     display: flex;
-    flex-direction: row;
-    align-items: center; 
+    align-items: baseline;
 }
 
 #contact-us div article span i{
@@ -326,13 +357,11 @@ main section{
 }
 
 #contact-us div form{
-    width: 40%;
+    width: 90%;
     text-align: left;
 }
 
-.contact-label{
-    margin-bottom: 5rem;
-}
+
 
 .contact-input{
     padding: 1rem;
@@ -348,7 +377,7 @@ main section{
     margin-bottom: 0.5rem;
     border-style: none;
     width: 100%;
-    height: 8rem;
+    padding-bottom: 8rem;
 }
 
 .submit{
@@ -360,7 +389,236 @@ main section{
     font-weight: bold;
 }
 
-.submit:hover{
-    background-color: black;
-    color: #e6bd43;
+
+#kart{
+    height: 30vh;
+    width: 100%;
+}
+
+
+
+
+
+
+/*Portfolio/Products siden design*/
+#heading{
+    width: 100%;
+    height: 40vh;
+    background-color: lightgray;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.explore-overskrift{
+    text-align: left;
+    width: 90%;
+    color: #252525;
+    border-bottom: #e6bd43;
+    border-bottom-style: solid;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#explore article{
+    display: flex;
+    padding-left: 1rem;
+}
+
+.explore-button{
+    border-style: solid;
+    border-width: 1px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #252525;
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+
+#explore article{
+    display: flex;
+}
+
+.bilde-bokser{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bilde-bokser>* {
+    flex: 3 1 692px;
+  }
+
+
+.bilde-bokser article{
+    max-width: 692px;
+    width: 100%;
+    min-width: 200px;
+    padding: 1rem;
+}
+
+.bilde-bokser article img{
+    width: 100%;
+}
+
+.bilde-bokser article h4{
+    text-align: left;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+
+
+@media only screen and (min-width: 650px) {
+    /* Endrer grid-malen for bredere skjermer */
+    #grid_container {
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    #navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    #nav-knapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+        height: auto;
+    }
+
+    /*designer hover funksjon på knapper*/
+    .knapp:hover{
+        background-color: black;
+        color: #e6bd43;
+    }
+
+    .submit:hover{
+        background-color: black;
+        color: #e6bd43;
+    }
+
+    #newsletter form button:hover{
+        background-color: black;
+        color: #e6bd43;
+    }
+
+    #about-our-company h4 a:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+
+    .contact-knapp:hover{
+        background-color: #252525;
+        color: #e6bd43;
+    }
+
+
+    /*Forside design for større skjermer*/
+
+    #video-section h1{
+        font-size: 3rem;
+    }
+
+    #subheading h2{
+        font-size: 2rem;
+    }
+
+    #services h2{
+        font-size: 2rem;
+    }
+
+    #newsletter h2{
+        font-size: 2rem;
+    }
+
+    #subheading{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #about-our-company{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    #about-our-company article{
+        padding: 1rem;
+        padding-right: 10%; 
+    }
+
+    #about-our-company img{
+        padding: 1rem;
+        padding-left: 5%;
+        height: auto;
+        width: 350px;
+    }
+
+    #services div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*About siden*/
+
+    #companyname{
+        display: flex;
+        justify-content: flex-end;
+        height: auto;
+    }
+    #companyname article{
+        width: 40%;
+        display: flex;
+        
+        
+    }
+    #about-services div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #contact-us div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 3rem;
+    }
+
+    #contact-us div form{
+        width: 40%;
+    }
+
+    #contact-us div article{
+        width: 40%;
+    }
+
+    /*portfolio siden*/
+
+
+
+
+
+
+
+
+
+
 }
