@@ -33,7 +33,10 @@ footer{
 /*tilbake til toppen knapp*/
 #til-toppen{
     background-color: #252525;
-    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
     border-radius: 5px;
     position: fixed;
     bottom: 3rem;
@@ -122,17 +125,21 @@ footer section a{
     display:none;
 }
 
+#video-section{
+    background-image: url(/ressurser/bakgrunnsbilde.jpg);
+}
 
 #innhold{
     width: 100%;
     height: 50vh;
-    background-color: lightgray;
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.5);
 }
+
 
 #innhold h1{
     font-size: 2rem;
@@ -269,6 +276,7 @@ footer section a{
     display: flex;
     justify-content: center;
     width: 100%;
+    background-image: url(/ressurser/bakgrunnsbilde.jpg);
 }
 
 #companyname article{
@@ -277,7 +285,7 @@ footer section a{
     justify-content: space-evenly;
     width: 60%;
     text-align: left;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 2rem;
     margin: 2rem;
 }
@@ -384,7 +392,7 @@ footer section a{
 
 
 #kart{
-    height: 30vh;
+    height: 35vh;
     width: 100%;
 }
 
@@ -396,13 +404,21 @@ footer section a{
 /*Portfolio/Products siden design*/
 #heading{
     width: 100%;
+    background-image: url(/ressurser/bakgrunnsbilde.jpg);
+}
+
+#heading article{
     height: 40vh;
-    background-color: lightgray;
+    background-color: rgba(255, 255, 255, 0.5);
     padding-top: 3rem;
     padding-bottom: 3rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+}
+
+#heading article h1{
+    font-size: 2rem;
 }
 
 .explore-overskrift{
@@ -442,6 +458,7 @@ footer section a{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -450,7 +467,12 @@ footer section a{
     width: 100%;
     min-width: 200px;
     padding: 1rem;
+    transition: all .2s ease-in-out;
 }
+
+.bilde-bokser>* {
+    flex: 1 1 475px;
+  }
 
 .bilde-bokser article img{
     width: 100%;
@@ -487,6 +509,7 @@ footer section a{
     footer{
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
         padding: 2rem;
         height: auto;
     }
@@ -614,22 +637,18 @@ footer section a{
         font-size: 1.2rem;
     }
 
-    .bilde-bokser>* {
-        flex: 1 1 692px;
-      }
+    .bilde-bokser article:hover{
+        transform: scale(1.04);
+    }
+
+
 }
 
 @media only screen and (min-width: 1000px) {
-    /* Endrer grid-malen for bredere skjermer */
-    #grid_container {
-        grid-template-areas: "header header header" "main main main" "footer footer footer";
-    }
-
     /*legger til video som bakgrunn*/
     #video{
         display: block;
         width: 100%;
-        opacity: 0.6;
         position: relative;
     }
     #innhold{
@@ -637,11 +656,18 @@ footer section a{
         margin-left: auto;
         margin-right: auto;
         top: 8rem;
-        background-color: transparent;   
+        background-image: none;
     }
 
     #video-section{
         overflow:hidden;
         height: 60vh;
+        background-image: none;
+    }
+
+    /*Portfolio siden flex*/
+    .bilde-bokser{
+        display: flex;
+        justify-content: left;
     }
 }
