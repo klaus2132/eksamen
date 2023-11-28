@@ -1,6 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    max-width: 1600px;
 }
 
 #grid_container{
@@ -79,9 +80,6 @@ footer{
     color: #252525;
 }
 
-
-
-
 .logo{
     height: 6rem;
     width: auto;
@@ -119,16 +117,11 @@ footer section a{
 
 
 
-/*Video section
-#video-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 40vh;
-    background-color: lightgray;
+/*Video section*/
+#video{
+    display:none;
 }
-*/
+
 
 #innhold{
     width: 100%;
@@ -418,6 +411,7 @@ footer section a{
     color: #252525;
     border-bottom: #e6bd43;
     border-bottom-style: solid;
+    padding-top: 1rem;
     padding-bottom: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -425,6 +419,7 @@ footer section a{
 
 #explore article{
     display: flex;
+    flex-wrap: wrap;
     padding-left: 1rem;
 }
 
@@ -435,7 +430,7 @@ footer section a{
     font-weight: 500;
     color: #252525;
     padding: 0.3rem;
-    margin: 0.3rem;
+    margin-right: 1rem;
 }
 
 #explore article{
@@ -448,10 +443,6 @@ footer section a{
     flex-wrap: wrap;
     align-items: center;
 }
-
-.bilde-bokser>* {
-    flex: 3 1 692px;
-  }
 
 
 .bilde-bokser article{
@@ -528,7 +519,7 @@ footer section a{
 
 
     /*Forside design for større skjermer*/
-
+    
     #video-section h1{
         font-size: 3rem;
     }
@@ -582,12 +573,12 @@ footer section a{
         justify-content: flex-end;
         height: auto;
     }
+
     #companyname article{
         width: 40%;
         display: flex;
-        
-        
     }
+
     #about-services div{
         display: flex;
         flex-direction: row;
@@ -611,14 +602,46 @@ footer section a{
     }
 
     /*portfolio siden*/
+    #heading h1{
+        font-size: 3rem;
+    }
 
+    .explore-overskrift{
+        font-size: 2rem;
+    }
 
+    .explore-button{
+        font-size: 1.2rem;
+    }
 
+    .bilde-bokser>* {
+        flex: 1 1 692px;
+      }
+}
 
+@media only screen and (min-width: 1000px) {
+    /* Endrer grid-malen for bredere skjermer */
+    #grid_container {
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
 
+    /*legger til video som bakgrunn*/
+    #video{
+        display: block;
+        width: 100%;
+        opacity: 0.6;
+        position: relative;
+    }
+    #innhold{
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 8rem;
+        background-color: transparent;   
+    }
 
-
-
-
-
+    #video-section{
+        overflow:hidden;
+        height: 60vh;
+    }
 }
