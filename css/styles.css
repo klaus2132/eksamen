@@ -489,7 +489,6 @@ footer section a{
 
 
 @media only screen and (min-width: 700px) {
-    /* Endrer grid-malen for bredere skjermer */
     #grid_container {
         grid-template-areas: "header header header" "main main main" "footer footer footer";
     }
