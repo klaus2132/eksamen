@@ -278,6 +278,7 @@ footer section a{
     justify-content: center;
     width: 100%;
     background-image: url(/ressurser/bakgrunnsbilde.jpg);
+    background-repeat: no-repeat;
 }
 
 #companyname article{
