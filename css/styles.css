@@ -1,5 +1,6 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     max-width: 1600px;
 }
@@ -348,12 +349,12 @@ footer section a{
     text-align: left;
 }
 
-#contact-us div article span{
+#contact-us div article article{
     display: flex;
     align-items: baseline;
 }
 
-#contact-us div article span i{
+#contact-us div article article i{
     padding-right: 1rem;
 }
 
@@ -486,7 +487,7 @@ footer section a{
 
 
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 700px) {
     /* Endrer grid-malen for bredere skjermer */
     #grid_container {
         grid-template-areas: "header header header" "main main main" "footer footer footer";
